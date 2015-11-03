@@ -12,6 +12,7 @@ import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         mainActivity=this;
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -51,13 +53,15 @@ public class MainActivity extends AppCompatActivity {
         res = getResources();
         //加载main.xml界面设计文件
 
-        //这里有问题
-       // setContentView(R.layout.main);
+
+        setContentView(R.layout.activity_main);
         //获取main.xml文件中ID为mainLayout的组件
-       // mainLayout = (FrameLayout) findViewById(R.id.mainLayout);
+
+        //有问题。
+        //mainLayout = (FrameLayout) findViewById(R.);
         //创建GameView组件
-       // mainView = new GameView(this.getApplicationContext(),GameView.STAGE_INIT);
-       // mainLP = new FrameLayout.LayoutParams(MATCH_PARENT,MATCH_PARENT);
+        //mainView = new GameView(this.getApplicationContext(),GameView.);
+        mainLP = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
 
 
         //mainLayout.addView(mainView,mainLP);
